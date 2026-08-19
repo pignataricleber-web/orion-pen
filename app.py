@@ -141,8 +141,9 @@ def gerar_dossie_completo_pdf(matricula):
         pdf.set_text_color(100, 100, 100) 
         pdf.cell(0, 5, "FONTES E PROTOCOLOS CIENTÍFICOS APLICADOS:", new_x="LMARGIN", new_y="NEXT")
         pdf.set_font("helvetica", size=8)
-        pdf.multi_cell(0, 4, "- PCL-R (Hare Psychopathy Checklist-Revised): Padrão-ouro global para predição de reincidência violenta.", new_x="LMARGIN", new_y="NEXT")
-        pdf.multi_cell(0, 4, "- C-SSRS (Columbia-Suicide Severity): Protocolo oficial de triagem endossado pela OMS e pelo FDA.", new_x="LMARGIN", new_y="NEXT")
+        pdf.multi_cell(0, 4, "- PCL-R (Hare Psychopathy Checklist-Revised): Padrão-ouro global para predição de reincidência violenta e psicopatia criminal.", new_x="LMARGIN", new_y="NEXT")
+        pdf.multi_cell(0, 4, "- C-SSRS (Columbia-Suicide Severity Rating Scale): Protocolo oficial de triagem endossado pela OMS e pelo FDA.", new_x="LMARGIN", new_y="NEXT")
+        pdf.multi_cell(0, 4, "- Triagem BPRS-A (Brief Psychiatric Rating Scale): Matriz avaliativa para quadros psicóticos e conversão penal.", new_x="LMARGIN", new_y="NEXT")
         pdf.set_text_color(0, 0, 0) 
     pdf.ln(5)
 
