@@ -231,7 +231,7 @@ if menu == "📝 Avaliação Integrada (Intake)":
     col_est1, col_est2 = st.columns(2)
     with col_est1:
         val_iniciacao = st.selectbox("1. Início da trajetória criminal antes dos 18 anos?", ["Não", "Sim"])
-        just_iniciacao = st.text_area("Justificativa (Fator 1):", placeholder="Mínimo 50 caracteres...")
+        just_iniciacao = st.text_area("Justificativa (Fator 1):", placeholder="Ex: Conforme análise do histórico, o primeiro registro infracional ocorreu aos 19 anos...")
         
         opcoes_crime = {
             "Nenhum antecedente relevante": 0.0,
@@ -241,26 +241,26 @@ if menu == "📝 Avaliação Integrada (Intake)":
             "Contra a Vida / Hediondo (ex: Homicídio)": 35.0
         }
         val_natureza = st.selectbox("2. Natureza do Delito Principal:", list(opcoes_crime.keys()))
-        just_natureza = st.text_area("Justificativa (Fator 2):", placeholder="Mínimo 50 caracteres...")
+        just_natureza = st.text_area("Justificativa Obrigatória (Fator 2):", placeholder="Ex: Conforme sentença condenatória às fls. 45, cumpre pena pelo Art. 171...")
         
         val_faccao = st.selectbox("5. Pertencimento a facção com lastro documental?", ["Não", "Sim"])
-        just_faccao = st.text_area("Justificativa (Fator 5):", placeholder="Mínimo 50 caracteres...")
+        just_faccao = st.text_area("Justificativa e Fonte Documental (Fator 5):", placeholder="Ex: O Relatório de Inteligência Penitenciária nº 12/2026 aponta ausência de vínculos ativos...")
         
         val_trabalho = st.selectbox("8. Engajado formalmente visando remição?", ["Não", "Sim (Reduz Risco)"])
-        just_trabalho = st.text_area("Justificativa (Fator 8):", placeholder="Mínimo 50 caracteres...")
+        just_trabalho = st.text_area("Justificativa (Fator 8):", placeholder="Ex: Declaração do setor de laborterapia comprova trabalho regular na manutenção predial...")
 
     with col_est2:
         val_reincidencia = st.selectbox("3. Possui reincidência com trânsito em julgado?", ["Não", "Sim"])
-        just_reincidencia = st.text_area("Justificativa (Fator 3):", placeholder="Mínimo 50 caracteres...")
+        just_reincidencia = st.text_area("Justificativa (Fator 3):", placeholder="Ex: A certidão de antecedentes criminais atualizada demonstra ausência de condenações...")
         
         val_fuga = st.selectbox("4. Histórico registrado de evasão ou falta grave (fuga)?", ["Não", "Sim"])
-        just_fuga = st.text_area("Justificativa (Fator 4):", placeholder="Mínimo 50 caracteres...")
+        just_fuga = st.text_area("Justificativa (Fator 4):", placeholder="Ex: O prontuário disciplinar da unidade não registra Processos Administrativos Disciplinares (PADs)...")
 
         val_quimica = st.selectbox("6. Avaliação clínica formal indica dependência química?", ["Não", "Sim"])
-        just_quimica = st.text_area("Justificativa (Fator 6):", placeholder="Mínimo 50 caracteres...")
+        just_quimica = st.text_area("Justificativa (Fator 6):", placeholder="Ex: A avaliação psicossocial atesta uso abusivo de entorpecentes, havendo recomendação...")
         
         val_disciplina = st.selectbox("7. Faltas disciplinares graves nos últimos 12 meses?", ["Não", "Sim"])
-        just_disciplina = st.text_area("Justificativa (Fator 7):", placeholder="Mínimo 50 caracteres...")
+        just_disciplina = st.text_area("Justificativa (Fator 7):", placeholder="Ex: O Boletim Informativo (BI) da unidade atesta bom comportamento carcerário...")
 
     if st.button("Salvar Avaliação Integrada e Gerar Dossiê"):
         campos_justificativa = {
